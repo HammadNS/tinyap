@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/hammadNS96/tinyap/issues"
   },
-  "homepage": "https://github.com/hammadNS96/tinyap#readme"
+  "homepage": "https://github.com/hammadNS96/tinyap#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }

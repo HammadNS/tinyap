@@ -11,5 +11,23 @@
         <a class="nav-item nav-link" href="/urls/new">Create New URL</a>
       </div>
     </div>
+    <% if(users[user_id]) { %>
+    <div style="padding-right: 10px;">
+      <p></p>
+      <p>
+        Logged In As: <%= users[user_id].email %> !
+      </p>
+    </div>
+    <form class="form-inline" action="/logout" method="POST">
+      <button type="submit" class="btn btn-outline-dark">Logout</button>
+    </form>
+    <% } else { %>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+      <div class="navbar-nav" style="text-align: right;">
+        <a class="nav-item nav-link" href="/login">Login</a>
+        <a class="nav-item nav-link" href="/register">Register</a>
+      </div>
+    </div>
+    <% } %>
   </nav>
 </header>

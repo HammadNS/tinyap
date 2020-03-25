@@ -101,7 +101,7 @@ app.get('/u/:shortURL', (req, res) => {
 app.post('/register', (req, res) => {
   const email = req.body.emailAddress;
   const password = bcrypt.hashSync(req.body.pwd, 10);
-  if (email === "" || password === "") {
+  if (email === "" || req.body.pwd === "") {
     res.statusCode = 400;
     res.send('ERROR 400: Please fill out email and password')
   } else if (getUserByEmail(email, users)) {
